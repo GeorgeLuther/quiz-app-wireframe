@@ -1,0 +1,18 @@
+main {
+  border: 2px solid black;
+  padding: 8px;
+}
+form, section {
+  border: 2px solid blue;
+  padding: 8px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.start-div, .question-div, .feedback-div, .completion-div {
+  border: 2px solid red;
+  margin: 8px;
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quiz App</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
+    type="text/css" />
+  <link href="app.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <h1>Hone Your Tone!</h1>
+  </header>
+ 
+  <main>
+    <form>
+      <h2>Welcome to this quiz!</h2>
+      <p>This quiz allows you to hone your understanding of esoteric or subjective musical knowledge. 
+      This is a 'closed-notes' quiz so please remove all musical materials from your desk and screen...
+      We're watching you!</p>
+      <div class="global-quiz-controls">
+        <h3>Quiz Options:</h3>
+        <h4>Question Controls</h4>
+
+        <div class="start-div total-questions-controls">
+          <button class="minus-questions-button js-minus-questions-button">
+            <span class="button-label">-</span>
+          </button>
+          
+          <input type="text" placeholder="number of questions" name="total-questions-entry" class="total-questions-entry js-total-questions-entry"></input>
+          
+          <button class="plus-questions-button js-plus-questions-button">
+            <span class="button-label">+</span>
+          </button>
+        </div>
+    
+        <div class="start-div order-controls">
+          <label for="randomize-questions-checkbox">randomize question order</label>
+          <input type="checkbox" id="randomize-questions-checkbox" name="randomize-questions-checkbox"
+                checked>
+    
+          <label for="randomize-answers-checkbox">randomize answer order</label>
+          <input type="checkbox" id="randomize-answers-checkbox" name="randomize-answers-checkbox">
+        </div>
+    
+        <div class="start-div one-chance-controls">
+          <label for="one-chance-checkbox">enable one chance mode?</label>
+          <input type="checkbox" id="js-one-chance-checkbox"
+           name="one-chance-checkbox">
+           <p>In one chance mode you receive immediate feedback but the stakes are high! 
+             When  you make a choice you must stick with it and automatically move on to the next question.
+            There is no turning back!
+          </p>
+        </div>    
+      </div>
+      <button type="submit" class="start-quiz submit-btn">Get Crackin'</button>
+    </form>
+    <form>
+      <div class="question-div progress-report">
+        <p class="number-correct">Correct: 3<p>
+        <p class="current-question">4 / 9<p>
+        <p class="number-incorrect">Incorrect: 1</p>
+      </div>
+
+      <h2 class="currentQuestion">Question will go here?</h2>
+
+      <div class="question-div answer-radios">
+        <!-- These will need to be iterated -->
+        <label for="one">Answer option one</label>
+        <input type="radio" id="one" name="one" value=${i}><br>
+        <label for="two">Answer option two</label>
+        <input type="radio" id="two" name="two" value=${i}><br>
+        <label for="three">Answer option three</label>
+        <input type="radio" id="three" name="three" value=${i}><br>
+      </div>
+
+      <div class="question-div navigation">
+        <button type="submit" class="js-go-back-btn submit-btn">go back</button>
+        <button type="submit" class="js-submit-answer submit-btn">go forth</button>
+      </div>
+    </form>
+    <section>
+      <div class="feedback-div progress-report">
+        <p class="number-correct">Correct: 3<p>
+        <p class="current-question">4 / 9<p>
+        <p class="number-incorrect">Incorrect: 1</p>
+      </div>
+
+      <h2 class="currentQuestion">Question will go here?</h2>
+
+      <p>Positive or negative text response like... 
+        You are correctamundo! Cheese does in fact grow on trees!
+      </p>
+
+      <div class="feedback-div navigation">
+        <button type="submit" class="js-next-question submit-btn">next question</button>
+      </div>
+    </section>
+    <section>
+      <div class="completion-div progress-report">
+        <p class="number-correct">Correct: 3<p>
+        <p class="number-incorrect">Incorrect: 1</p>
+      </div>
+
+      <h2 class="currentQuestion">CONGRATULATIONS!</h2>
+
+      <p>You received a passing score of 85% on this quiz! Your species will be proud.
+      </p>
+
+      <div class="feedback-div navigation">
+        <button type="submit" class="js-review-questions submit-btn">review questions</button>
+        <button type="submit" class="js-restart-quiz submit-btn">restart quiz</button>
+        <button type="submit" class="js-add-question submit-btn">add a question</button>
+      </div>
+    </section>
+
+
+    </form>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
